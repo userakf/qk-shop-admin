@@ -1,15 +1,26 @@
 <template>
-    <button @click="add"> {{ counter.count }} </button>
+    <div class="home">
+        <img src="@/assets/logo.png" alt="">
+        <div>
+            首页
+        </div>
+        <button @click="add"> {{ counter.count }} </button>
+    </div>
 </template>
 
 <script setup lang="ts">
-    import { useCounterStore } from '../../stores/counter';
-    const counter = useCounterStore()
-    function add(){
-        counter.increnemt()
-    }
+import { useCounterStore } from '@/stores/counter';
+const counter = useCounterStore()
+function add() {
+    counter.increnemt()
+}
+
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+.home {
+    img {
+        box-shadow: 0 0 10px $color;
+    }
+}
 </style>
