@@ -4,7 +4,7 @@
         <div>
             首页
         </div>
-        <button @click="add"> {{ counter.count }} </button>
+        <el-button @click="add"> {{ counter.count }} </el-button>
     </div>
 </template>
 
@@ -14,7 +14,6 @@ const counter = useCounterStore()
 function add() {
     counter.increnemt()
 }
-
 </script>
 
 <style lang="scss" scoped>
