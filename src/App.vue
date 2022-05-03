@@ -1,23 +1,8 @@
 <script setup lang="ts">
-  // This starter template is using Vue 3 <script setup> SFCs
-  // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-  import { onMounted, ref } from 'vue';
-  import HelloWorld from './components/HelloWorld.vue'
-  import MyButton from './components/MyButton.tsx'
-  const helloworld = ref<InstanceType<typeof HelloWorld> | null>(null)
-  const msg = ref('Hello Vue 3 + TypeScript + Vite')
-  onMounted(() => {
-    // console.log(helloworld.value);
-  })
-  const update = (value:string) => {
-    msg.value = msg.value + value
-  }
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld ref="helloworld" :msg="msg" @update="update"/>
-  <MyButton />
+  <router-view></router-view>
 </template>
 
 <style>
