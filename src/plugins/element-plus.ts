@@ -1,9 +1,12 @@
 import ElementPlus from 'element-plus'
+
 import 'element-plus/dist/index.css'
 import { App } from 'vue'
 
 export default {
     install(app: App) {
         app.use(ElementPlus, { size: 'small', zIndex: 2000 })
+        // 加载所有icon图标
+        
     }
 }

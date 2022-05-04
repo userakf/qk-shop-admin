@@ -1,8 +1,8 @@
 <template>
     <div class="home">
-        <img src="@/assets/logo.png" alt="">
         <div>
-            首页
+            <router-link to="/">首页</router-link>
+            <router-link to="/login">登陆</router-link>
         </div>
         <el-button @click="add"> {{ counter.count }} </el-button>
     </div>
