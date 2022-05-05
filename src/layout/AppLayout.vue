@@ -6,7 +6,7 @@
             </el-aside>
             <el-container>
                 <el-header>
-                    <ToggleSidebarVue />
+                    <AppHeader />
                 </el-header>
                 <el-main>
                     <router-view></router-view>
@@ -18,14 +18,13 @@
 
 <script setup lang="ts">
 import AppMenu from './AppMenu/index.vue';
-import ToggleSidebarVue from './AppHeader/ToggleSidebar.vue';
+import AppHeader from './AppHeader/index.vue'
 </script>
 
 <style scoped lang="scss">
 .el-header,
 .el-footer {
-    background-color: #B3C0D1;
-    color: #333;
+    color: #000;
 }
 .el-aside {
     width: auto;

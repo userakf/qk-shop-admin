@@ -1,16 +1,20 @@
 
 <template>
-    <el-icon @click="collapse()"><operation /></el-icon>
+    <el-icon @click="handleCollapse()">
+        <fold v-if="!commonStore.isCollapse"/>
+        <expand v-else/>
+    </el-icon>
 </template>
 
 <script setup lang="ts">
 import { useCommonStore } from '@/stores';
 const commonStore = useCommonStore()
-const collapse = () => {
+const handleCollapse = () => {
     commonStore.setIsCollapse()
 }
 </script>
 
 <style scoped>
-
+.el-icon{
+}
 </style>
