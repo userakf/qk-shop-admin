@@ -3,13 +3,22 @@
  */
 
 import request from "@/utils/request";
-import { Logininfo } from './types/common'
+import { Logininfo,LoginResponse } from './types/common'
 // interface ResponseData<T = any> {
 //     status:number,
 //     msg:string,
 //     data:T
 // }
-
+export const Login = (data:{
+    account:string,
+    pwd:string
+}) => {
+    return request<LoginResponse>({
+        method:'POST',
+        url:'/login',
+        data
+    })
+}
 export const getLoginInfo = () => {
     return request<Logininfo>({
         method:'GET',

@@ -1,7 +1,7 @@
 <template>
     <el-dropdown trigger="click">
         <span class="el-dropdown-link">
-            Dropdown List
+            {{ userInfo.user?.account || 'amdin' }}
             <el-icon class="el-icon--right">
                 <arrow-down />
             </el-icon>
@@ -19,6 +19,8 @@
 </template>
 
 <script setup lang="ts">
+import { useUserInfoStore } from '@/stores';
+const userInfo = useUserInfoStore()
 
 </script>
 
