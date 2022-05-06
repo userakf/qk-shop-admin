@@ -45,3 +45,10 @@ export const getLoginInfo = () => {
     //         return res.data
     //     })
 }
+
+export const Ilogout = () => {
+    return request<LoginResponse>({
+        method:'POST',
+        url:'/logout'
+    })
+}
