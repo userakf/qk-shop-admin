@@ -21,6 +21,9 @@ export const useUserInfoStore = defineStore('userinfo', {
         setUser(payload: UserInfo | null) {
             this.user = payload
             setItem(USER, this.user)
+        },
+        removeUser(){
+            removeItem(USER)
         }
     }
 })

@@ -1,8 +1,9 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import AppLayout from '@/layout/AppLayout.vue'
-import ProductRoutes from './modules/product'
+// import ProductRoutes from './modules/product'
 import nprogress from 'nprogress'
 import 'nprogress/nprogress.css'
+
 const routes: RouteRecordRaw[] = [
     {
         path: '/',
@@ -16,13 +17,13 @@ const routes: RouteRecordRaw[] = [
                 name: 'home',
                 component: () => import('@/views/home/index.vue')
             },
-            ProductRoutes
+            // ProductRoutes
         ]
     },
     {
         path: '/login',
         name: 'login',
-        component: () => import('../views/login/index.vue')
+        component: () => import('@/views/login/index.vue')
     }
 ]
 const router = createRouter({

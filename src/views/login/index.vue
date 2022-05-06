@@ -36,7 +36,7 @@ async function getInfo() {
 }
 onMounted(() => {
     // getInfo()
-    document.querySelector('body')!.style.backgroundColor = '#efefef'
+    // document.querySelector('body')!.style.backgroundColor = '#efefef'
 })
 const router = useRouter()
 const loginRuleFormRef = ref<IElForm | null>(null)
@@ -73,11 +73,11 @@ const handleSubmit = async () => {
     loading.value = true
 
     // 请求提交
-    const { user_info } = await Login(loginRuleForm).finally(() => {
-        loading.value = false
-    })
+    // const { user_info } = await Login(loginRuleForm).finally(() => {
+    //     loading.value = false
+    // })
     
-    userInfo.setUser(user_info)
+    // userInfo.setUser(user_info)
     // 处理响应
     router.replace({
         name: 'home'
@@ -86,6 +86,7 @@ const handleSubmit = async () => {
 </script>
 
 <style scoped lang="scss">
+
 .login-container {
     padding: 20px;
     border-radius: 10px;
@@ -94,7 +95,7 @@ const handleSubmit = async () => {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: #efefef;
     padding-top: 50px;
 
     img {
