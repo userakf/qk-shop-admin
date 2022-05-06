@@ -28,6 +28,7 @@ const logout = async () => {
     // 确认发出退出请求
     // await Ilogout()
     ElMessage.success('退出成功')
+    userInfo.setUser(null)
     userInfo.removeUser()
     // 跳转到登陆页
     router.push({

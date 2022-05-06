@@ -49,6 +49,6 @@ export const getLoginInfo = () => {
 export const Ilogout = () => {
     return request<LoginResponse>({
         method:'POST',
-        url:'/logout'
+        url:'/setting/admin/logout'
     })
 }

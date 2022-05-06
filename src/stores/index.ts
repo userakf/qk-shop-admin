@@ -14,10 +14,10 @@ export const useCommonStore = defineStore('common', {
 })
 export const useUserInfoStore = defineStore('userinfo', {
     state: () => ({
-        user: getItem<UserInfo>(USER)
+        user: getItem<{ token:string } & UserInfo>(USER)
     }),
     actions: {
-        setUser(payload: UserInfo | null) {
+        setUser(payload: { token:string } & UserInfo | null) {
             this.user = payload
             setItem(USER, this.user)
         },

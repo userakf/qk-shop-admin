@@ -1,5 +1,8 @@
 import axios, { AxiosRequestConfig } from "axios";
 import { ElMessage } from "element-plus";
+import { useUserInfoStore } from "@/stores";
+
+const userInfo = useUserInfoStore()
 
 const request = axios.create({
     baseURL: import.meta.env.VITE_API_BASEURL
@@ -7,6 +10,9 @@ const request = axios.create({
 // 请求拦截器
 request.interceptors.request.use((config) => {
     // 统一设置用户 token
+    if(userInfo.user && userInfo.user.token){
+        config.headers!.Authorization  = 'Bearer ' + userInfo.user.token
+    }
     return config
 }, (error) => {
     return Promise.reject(error)
