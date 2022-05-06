@@ -12,7 +12,6 @@ export const useCommonStore = defineStore('common', {
         }
     }
 })
-
 export const useUserInfoStore = defineStore('userinfo', {
     state: () => ({
         user: getItem<UserInfo>(USER)
