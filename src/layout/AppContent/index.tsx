@@ -1,9 +1,7 @@
 import { ref } from "vue"
+import WaterFallsFlow from './WaterFallsFlow.vue'
 interface Props {
-    title: {
-        type: string,
-        default: () => ''
-    }
+    title:string
 }
 interface Emit {
     emit: (event: 'add', ...args: any[]) => void
@@ -22,6 +20,7 @@ export default (props: Props, { emit }: Emit) => {
             我是 {props.title}
             <el-button onClick={testclick}>{count.value}</el-button>
             <el-button onClick={emitCLick}>点击</el-button>
+            <WaterFallsFlow />
         </div>
     )
 }

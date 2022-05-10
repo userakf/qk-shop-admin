@@ -9,6 +9,7 @@
                     <AppHeader />
                 </el-header>
                 <el-main>
+                    <WaterMark :config="waterMarkConfig"/>
                     <AppContent :title="title" @add="parentClick"/>
                     <router-view></router-view>
                 </el-main>
@@ -21,10 +22,20 @@
 import AppMenu from './AppMenu/index.vue';
 import AppHeader from './AppHeader/index.vue'
 import AppContent from './AppContent/index';
+import WaterMark from '@/components/WaterMark.vue';
+import { WaterMarkConfig } from '@/components/Watermark.vue'
+import imgUrl from '../assets/logo.webp'
+
 import { ref } from 'vue';
 const title = ref('TSX')
 const parentClick = (value:string) => {
     console.log(value);
+}
+const waterMarkConfig:WaterMarkConfig = {
+    msg:'宫内莲华',
+    width:300,
+    height:300,
+    imgURL:imgUrl
 }
 </script>
 

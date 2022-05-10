@@ -1,35 +1,35 @@
 <script setup lang="ts">
-  import { onMounted, ref , computed } from 'vue'
-  interface book {
-    a:number,
-    b:string
-  }
-  defineProps<{ 
-    msg: string,
-  }>()
+import { onMounted, ref, computed } from 'vue'
+interface book {
+  a: number,
+  b: string
+}
+defineProps<{
+  msg: string,
+}>()
 
-  const emit = defineEmits<{
-    (e:'update',value:string):void
-  }>()
+const emit = defineEmits<{
+  (e: 'update', value: string): void
+}>()
 
-  const count = ref(0)
-  const foo = ref<book | null>(null)
-  const title = ref<HTMLHeadElement | null>(null)
-  onMounted(() => {
-    // console.log(title.value);
-  })
-  foo.value = {
-    a:11,
-    b:'hello' 
-  }
+const count = ref(0)
+const foo = ref<book | null>(null)
+const title = ref<HTMLHeadElement | null>(null)
+onMounted(() => {
+  // console.log(title.value);
+})
+foo.value = {
+  a: 11,
+  b: 'hello'
+}
 
-  let doubleCount = computed(() => {
-    return count.value * 2
-  })
-  const handleChange = ():void => {
-    count.value++
-    emit('update','hello')
-  }
+let doubleCount = computed(() => {
+  return count.value * 2
+})
+const handleChange = (): void => {
+  count.value++
+  emit('update', 'hello')
+}
 </script>
 
 <template>

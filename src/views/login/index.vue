@@ -1,6 +1,6 @@
 <template>
     <div class="login-container">
-        <img src="@/assets/logon.webp" alt="">
+        <img src="@/assets/logo.webp" alt="">
         <el-form ref="loginRuleFormRef" :model="loginRuleForm" status-icon :rules="loginRules" class="login-ruleForm"
             @submit.prevent="handleSubmit">
             <el-form-item prop="pass">
