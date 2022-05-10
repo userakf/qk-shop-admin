@@ -9,6 +9,7 @@
                     <AppHeader />
                 </el-header>
                 <el-main>
+                    <AppContent :title="title" @add="parentClick"/>
                     <router-view></router-view>
                 </el-main>
             </el-container>
@@ -19,6 +20,12 @@
 <script setup lang="ts">
 import AppMenu from './AppMenu/index.vue';
 import AppHeader from './AppHeader/index.vue'
+import AppContent from './AppContent/index';
+import { ref } from 'vue';
+const title = ref('TSX')
+const parentClick = (value:string) => {
+    console.log(value);
+}
 </script>
 
 <style scoped lang="scss">

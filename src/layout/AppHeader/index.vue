@@ -57,5 +57,4 @@ import DropDown from './DropDown.vue';
         }
     }
 }
-
 </style>
