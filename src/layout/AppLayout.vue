@@ -22,8 +22,7 @@
 import AppMenu from './AppMenu/index.vue';
 import AppHeader from './AppHeader/index.vue'
 import AppContent from './AppContent/index';
-import WaterMark from '@/components/WaterMark.vue';
-import { WaterMarkConfig } from '@/components/Watermark.vue'
+import WaterMark, { WaterMarkConfig } from '@/components/WaterMark.vue';
 import imgUrl from '../assets/logo.webp'
 
 import { ref } from 'vue';
@@ -33,8 +32,8 @@ const parentClick = (value:string) => {
 }
 const waterMarkConfig:WaterMarkConfig = {
     msg:'宫内莲华',
-    width:300,
-    height:300,
+    width:200,
+    height:200,
     imgURL:imgUrl
 }
 </script>

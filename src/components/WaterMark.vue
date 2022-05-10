@@ -21,7 +21,7 @@ const defaultConfig:WaterMarkConfig =  {
     imgURL:imgUrl
 }
 const props = defineProps<{
-    config:WaterMarkConfig
+    config:WaterMarkConfig | null
 }>()
 
 Object.assign(defaultConfig,props.config)
